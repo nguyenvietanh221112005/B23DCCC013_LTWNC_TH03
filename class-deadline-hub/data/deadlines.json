@@ -1,0 +1,79 @@
+[
+  {
+    "id": 2,
+    "subjectSlug": "web-nang-cao",
+    "title": "Bài tập Buổi 8 – Xác thực và Middleware",
+    "dueAt": "2026-11-06T23:59:00+07:00",
+    "description": "Đăng nhập bằng Auth.js (Credentials, JWT), bảo vệ route bằng Middleware và kiểm tra quyền trong Server Action."
+  },
+  {
+    "id": 4,
+    "subjectSlug": "phan-tich-nghiep-vu",
+    "title": "Sơ đồ BPMN quy trình đặt món",
+    "dueAt": "2026-10-25T23:59:00+07:00",
+    "description": "Vẽ sơ đồ BPMN 2.0 cho quy trình đặt món tại nhà hàng, có ít nhất 3 lane và các gateway phù hợp."
+  },
+  {
+    "id": 5,
+    "subjectSlug": "phan-tich-nghiep-vu",
+    "title": "Đặc tả use case hệ thống",
+    "dueAt": "2026-11-03T23:59:00+07:00",
+    "description": "Viết đặc tả chi tiết cho 5 use case chính: tác nhân, tiền điều kiện, luồng chính, luồng thay thế."
+  },
+  {
+    "id": 6,
+    "subjectSlug": "phan-tich-nghiep-vu",
+    "title": "Báo cáo phân tích nghiệp vụ nhóm",
+    "dueAt": "2026-11-28T23:59:00+07:00",
+    "description": "Báo cáo cuối kỳ theo nhóm: hiện trạng, yêu cầu, mô hình nghiệp vụ và đề xuất giải pháp."
+  },
+  {
+    "id": 7,
+    "subjectSlug": "co-so-du-lieu",
+    "title": "Thiết kế lược đồ ERD",
+    "dueAt": "2026-10-29T23:59:00+07:00",
+    "description": "Thiết kế ERD cho hệ thống quản lý thư viện, chuyển sang lược đồ quan hệ và chuẩn hoá đến 3NF."
+  },
+  {
+    "id": 8,
+    "subjectSlug": "co-so-du-lieu",
+    "title": "Bài tập SQL nâng cao",
+    "dueAt": "2026-11-10T23:59:00+07:00",
+    "description": "Viết 15 truy vấn dùng JOIN, GROUP BY, subquery và window function trên CSDL mẫu."
+  },
+  {
+    "id": 9,
+    "subjectSlug": "co-so-du-lieu",
+    "title": "Kiểm tra giữa kỳ",
+    "dueAt": "2026-11-13T23:59:00+07:00",
+    "description": "Bài kiểm tra trên lớp, 60 phút. Nội dung: ERD, chuẩn hoá và SQL."
+  },
+  {
+    "id": 10,
+    "subjectSlug": "mang-may-tinh",
+    "title": "Lab phân tích gói tin với Wireshark",
+    "dueAt": "2026-10-22T23:59:00+07:00",
+    "description": "Bắt và phân tích gói tin HTTP, DNS, TCP handshake. Nộp file .pcapng kèm báo cáo."
+  },
+  {
+    "id": 11,
+    "subjectSlug": "mang-may-tinh",
+    "title": "Bài tập chia subnet",
+    "dueAt": "2026-10-31T23:59:00+07:00",
+    "description": "Chia mạng 172.16.0.0/16 cho 6 phòng ban theo VLSM, trình bày bảng địa chỉ."
+  },
+  {
+    "id": 12,
+    "subjectSlug": "mang-may-tinh",
+    "title": "Báo cáo thực hành định tuyến",
+    "dueAt": "2026-11-17T23:59:00+07:00",
+    "description": "Cấu hình định tuyến tĩnh và OSPF trên Packet Tracer, nộp file .pkt và báo cáo."
+  },
+  {
+    "id": 13,
+    "title": "baif 9",
+    "subjectSlug": "web-nang-cao",
+    "dueAt": "2026-10-28T14:20:00+07:00",
+    "description": ""
+  }
+]

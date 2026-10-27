@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "web-nang-cao",
+    "code": "WEB",
+    "name": "Lập trình Web nâng cao",
+    "shortName": "Web nâng cao",
+    "description": "React/TypeScript, quản lý state, kiểm thử và Next.js",
+    "color": "#2f45d8"
+  },
+  {
+    "slug": "phan-tich-nghiep-vu",
+    "code": "BA",
+    "name": "Phân tích nghiệp vụ",
+    "shortName": "Phân tích nghiệp vụ",
+    "description": "Khảo sát yêu cầu, BPMN, use case và tài liệu đặc tả",
+    "color": "#0b6b58"
+  },
+  {
+    "slug": "co-so-du-lieu",
+    "code": "CSDL",
+    "name": "Cơ sở dữ liệu",
+    "shortName": "Cơ sở dữ liệu",
+    "description": "Mô hình ERD, chuẩn hoá, SQL và tối ưu truy vấn",
+    "color": "#7c3aed"
+  },
+  {
+    "slug": "mang-may-tinh",
+    "code": "NET",
+    "name": "Mạng máy tính",
+    "shortName": "Mạng máy tính",
+    "description": "Mô hình TCP/IP, chia subnet, định tuyến và phân tích gói tin",
+    "color": "#8a5a00"
+  }
+]
