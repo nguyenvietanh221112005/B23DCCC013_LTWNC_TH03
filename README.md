@@ -21,6 +21,7 @@ Cổng web deadline của lớp, viết bằng **Next.js 15 (App Router)**, **Au
 4. [Ảnh view-source của `/deadlines/1`](#4-ảnh-view-source-của-deadlines1)
 5. [Trả lời 2 câu hỏi](#5-trả-lời-2-câu-hỏi)
 6. [Phụ lục: đối chiếu yêu cầu, phân quyền, SEO, màn hình, điểm cộng](#6-phụ-lục)
+7. [Kiểm thử Jest cho `can()`](#7-kiểm-thử-jest-cho-can)
 
 ---
 
@@ -45,6 +46,9 @@ npm run dev                       # http://localhost:3000
 # 3b. Hoặc chạy bản production (dùng để đo Lighthouse)
 npm run build
 npm start                         # http://localhost:3000
+
+# 4. Chạy test Jest cho can() (xem mục 7)
+npm test
 ```
 
 Biến môi trường trong `.env.local`:
@@ -206,8 +210,30 @@ auth.ts             # Credentials (bcrypt + zod) + GitHub (tuỳ chọn)
 middleware.ts       # bảo vệ /dashboard, /admin
 lib/permissions.ts  # MA TRẬN PHÂN QUYỀN + can(role, action)
 lib/actions.ts      # Server Actions: đánh dấu xong, thêm, xoá (tự kiểm tra quyền + zod)
+lib/permissions.test.ts  # test Jest cho can() và bảng route (npm test)
 lib/session.ts      # requirePermission() cho trang server
 lib/db.ts           # đọc/ghi file JSON (server-only)
 types/next-auth.d.ts  # khai báo kiểu Session/JWT có id + role
 data/               # subjects.json · deadlines.json · users.json · progress.json
 ```
+
+---
+
+## 7. Kiểm thử Jest cho `can()`
+
+Test nằm ở [class-deadline-hub/lib/permissions.test.ts](class-deadline-hub/lib/permissions.test.ts), cấu hình ở `jest.config.js` (dùng `next/jest`, không cần cấu hình Babel). Chạy:
+
+```bash
+cd class-deadline-hub
+npm test
+```
+
+Nội dung kiểm thử (**20 test, tất cả đều qua**):
+
+- **Toàn bộ ma trận 4 hành động × 3 vai trò = 12 trường hợp**, so với bảng kỳ vọng viết độc lập trong file test (đúng bảng của đề: xem, đánh dấu đã xong, thêm, xoá).
+- `null` và `undefined` (chưa đăng nhập) được coi là `guest`.
+- Chỉ `admin` được thêm và xoá deadline; `guest` chỉ được xem.
+- `isAuthRole` chỉ chấp nhận `user` và `admin`.
+- `protectedRouteFor` (bảng route mà middleware dùng): `/admin` cần quyền thêm deadline, `/dashboard` cần quyền đánh dấu, trang công khai không bị chặn, không khớp nhầm tiền tố như `/administrator`; user vào `/admin` bị từ chối.
+
+![Kết quả npm test (Jest)](class-deadline-hub/docs/jest.png)
